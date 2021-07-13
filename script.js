@@ -22,7 +22,8 @@ quitPopup.addEventListener('click',function(){
         background.style.display = 'none'
     },2000)
 })
-// Toda essa parte acima se trata do Popup que inicia com o site, mostrando a logo do cassino
+
+
 function rowDices() {
     dado1 = Math.floor(Math.random() * (7 - 1) + 1)
     dado2 = Math.floor (Math.random() * (7 - 1) + 1)
@@ -30,9 +31,9 @@ function rowDices() {
 }
 
 const spin1000 = document.getElementById('spin-button')
-spin1000.addEventListener('click',function(){
+spin1000.addEventListener('click',function (){
     const graph = document.getElementById('graph')
-    graph.innerHTML= ''
+    graph.innerHTML = ''
     let results = [0,0,0,0,0,0,0,0,0,0,0]
     for(let i = 0; i < 1000; i++){
         let sort = rowDices()
@@ -58,7 +59,7 @@ spin1000.addEventListener('click',function(){
             continue
         }
         if(sort === 7){
-            results[5]++
+            results[5]++// here we use IIFE to make the loop for wait thr setTimeout delay
             continue
         }
         if(sort === 8){
@@ -80,15 +81,14 @@ spin1000.addEventListener('click',function(){
         
         results[10]++
         
-   }
-   let max = Math.max(...results)
-   graph.classList.remove('hidden')
-   let j = 0;
-   window.scrollTo(0,document.body.scrollHeight)
-   for(let i = 0; i < results.length;i++) {
-    setTimeout(function(i) {
-        
-        const newElement = document.createElement('div')
+    }
+    let max = Math.max(...results)
+    graph.classList.remove('hidden')
+    let j = 0;
+    window.scrollTo(0,document.body.scrollHeight)
+    for(let i = 0; i < results.length; i++) {
+        setTimeout(function(i) {                        // here we use IIFE to make the loop for wait thr setTimeout delay
+        const newElement = document.createElement('div')  
         newElement.classList.add('graphic-bar')
         newElement.innerText = j + 2
         const percent = document.createElement('p')
@@ -101,7 +101,7 @@ spin1000.addEventListener('click',function(){
         newElement.appendChild(percent)
         j++
         graph.appendChild(newElement)
-   },3000*i) 
+    },3000*i) 
 }
 })
 

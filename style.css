@@ -45,156 +45,169 @@ html {
         flex-direction:column;
         justify-content: center;
         transform: translateY(-120px)
-        
     }
-    .logo-image{
-        width: 300px;
-        height: 300px;
-    }
-
-    .closeLogo{
-        width: 300px;
-        padding : 10px 5px;
-        border-radius:15px;
-        border: 1px solid transparent;
-        font-size: 18px;
-        text-transform: uppercase;
-        font-variant: small-caps;
-        color: white;
-        background: #002754;
-        font-family: 'Roboto', sans-serif;
-       
-    }
-   
-    .logo-background .logo--hidden{
-        animation-name: logoAnimation-mobile;
-        animation-duration: 2s;
-        
-    }
-
-.content--visible{
-    animation-name: changeVisibility;
-    animation-duration:3s;
-    }
-.content{
-    opacity:0%;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color:#fff;
-}
-
-    .title{
-        margin-top: 50px;
-        text-align:center;
-        font-size:50px;
-        font-weight: 400;
-    }
-    .main{
-        display: flex;
-        justify-content:center;
-        flex-direction: column;
-        align-items: center;
-    }
-        .spin-button{
+        .logo--hidden{
+            animation-name: logoAnimation-mobile;
+            animation-duration: 2s;
             
-            background-color: #fff;
-            padding: 20px 10px;
-            border-radius: 10px;
+        }
+        .logo-image{
+            width: 300px;
+            height: 300px;
+        }
+
+        .closeLogo{
+            width: 300px;
+            padding : 10px 5px;
+            border-radius:15px;
             border: 1px solid transparent;
-            color:rgb(40, 99, 45);
-            transition:0.5s;
             font-size: 18px;
-            font-variant: small-caps;
             text-transform: uppercase;
-            width: fit-content;
+            font-variant: small-caps;
+            color: white;
+            background: #002754;
+            font-family: 'Roboto', sans-serif;        
         }
-        
-        .graphic{
-            margin: 50px 0;
-            margin-bottom: 0;
-            width:100%;
-            height:400px;
-            animation-duration:1s;
-            animation-name: changeVisibility;
-            background-color: #55E078;
+   
+   
+    .content{
+        opacity:0%;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        color:#fff;
+    }
+    .content--visible{
+        animation-name: changeVisibility;
+        animation-duration:3s;
+        }
+
+        .title{
+            margin-top: 50px;
+            text-align:center;
+            font-size:50px;
+            font-weight: 400;
+        }
+
+        .main{
             display: flex;
-            justify-content: flex-start;
-            align-items:flex-end;
+            justify-content:center;
+            flex-direction: column;
+            align-items: center;
         }
-            .graphic-bar{
-                margin: 0 0.5%;
-                animation-name: growBar;
-                animation-duration:2.5s;
-                background-color: #E0555D;
-                width: 8%;
-                max-height: 90%;
-                color: #fff;
-                font-size: 16px;
-                border-top-left-radius: 50px;
-                border-top-right-radius: 50px;
-                display: flex;
-                align-items:flex-end;
-                flex-wrap: wrap;
-                justify-content:center;
+
+            .spin-button{
+                
+                background-color: #fff;
+                padding: 20px 10px;
+                border-radius: 10px;
+                border: 1px solid transparent;
+                color:rgb(40, 99, 45);
+                transition:0.5s;
+                font-size: 18px;
+                font-variant: small-caps;
+                text-transform: uppercase;
+                width: fit-content;
             }
-            .graphic-percentage{
+            
+            .graphic{
+                margin: 50px 0;
+                margin-bottom: 0;
+                width:100%;
+                height:400px;
+                animation-duration:1s;
+                animation-name: changeVisibility;
+                background-color: #55E078;
+                display: flex;
+                justify-content: flex-start;
+                align-items:flex-end;
+            }
+
+                .graphic-bar{
+                    margin: 0 0.5%;
+                    animation-name: growBar;
+                    animation-duration:2.5s;
+                    background-color: #E0555D;
+                    width: 8%;
+                    max-height: 90%;
+                    color: #fff;
+                    font-size: 16px;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 50px;
+                    display: flex;
+                    align-items:flex-end;
+                    flex-wrap: wrap;
+                    justify-content:center;
+                }
+
+                .graphic-percentage{
+                    animation-name:changeVisibility;
+                    animation-duration:3s;
                     align-self: center;
                     width: 100%;
                     text-align: center;
                     font-size: 10px;
                     margin-bottom: 0;
-            }
-        
+                }
+            
 .hidden{
     display: none;
 }
-@media screen and (min-width:765px) {
+@media screen and (min-width: 765px) {
     .logo-background .logo--hidden{
         animation-name:logoAnimation;
     }
 
-    .closeLogo{
-        width: 600px;
-        font-size: 22px;
-    }
+        .logo-image{
+            width: 600px;
+            height: 600px;
+        }
+        
+        .closeLogo{
+            width: 600px;
+            font-size: 22px;
+        }
 
-    .graphic-bar:hover .graphic-percentage{
-        font-size:24px;
-    }
-    .graphic-bar{
-        font-size:32px;
-    }
-    .graphic{
-        margin-top:50px;
-        width:80%;
-        height:800px;
-    }
-    .graphic-percentage{
- 
-        display:none;
-    }
-    .graphic-bar:hover .graphic-percentage{
-            display:initial;
-            align-self: center;
-            width: 100%;
-            text-align: center;
-            font-size: 24px;
-    }
-    .logo-image{
-        width: 600px;
-        height: 600px;
-    }
-    .closeLogo:hover{
-        transition: 0.5s;
-        border: 1px solid #002754;;
-        background-color: #fff;
-        color: #002754;
-        cursor: pointer;
-    }
-    .spin-button:hover{
-        background-color:transparent;
-        border: 1px solid white;
-        color: #fff;
-        cursor: pointer;
-    }
+        .closeLogo:hover{
+            transition: 0.5s;
+            border: 1px solid #002754;;
+            background-color: #fff;
+            color: #002754;
+            cursor: pointer;
+        }
+
+        .spin-button:hover{
+            background-color:transparent;
+            border: 1px solid white;
+            color: #fff;
+            cursor: pointer;
+        }
+    
+            .graphic{
+                    margin-top:50px;
+                    width:80%;
+                    height:800px;
+            }
+
+                .graphic-bar{
+                    font-size:32px;
+                }
+
+                    .graphic-percentage{
+                        animation: none;
+                        display:none;
+                        
+                    }
+
+                    .graphic-bar:hover .graphic-percentage{
+                        animation-name: changeVisibility;
+                        animation-duration:0.5s;
+                        display:initial;
+                        align-self: center;
+                        width: 100%;
+                        text-align: center;
+                        font-size: 24px;
+                    }
+
+    
+    
 }
