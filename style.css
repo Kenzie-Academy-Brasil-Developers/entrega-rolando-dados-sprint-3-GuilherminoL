@@ -1,0 +1,90 @@
+@keyframes logoAnimation {
+    0% {opacity: 100%;width:600px; height:600px}
+    25%{opacity:100%; width: 700px; height:700px}
+    100%{opacity: 0%; width:600px; height:600px}
+}
+@keyframes backgroundChange {
+    from { background: none}
+    to { background:rgb(2, 54, 24);}
+}
+@keyframes changeVisibility {
+    from { opacity:0%}
+    to { opacity:100%}
+}
+.body-newcolor{
+    animation-name: backgroundChange;
+    animation-duration:3s;
+}
+    .logo-background {
+        left:0;
+        position: absolute;
+        height: 100vh;
+        z-index: 2;
+        width:100%;
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+        justify-content: flex-start;
+        
+    }
+    .logo-image{
+        width: 600px;
+        height: 600px;
+    }
+
+    .closeLogo{
+        width: 600px;
+        padding : 10px 0;
+        border-radius:15px;
+        border:none;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: white;
+        background: rgba(96, 99, 102, 0.808);
+        font-family: 'Roboto', sans-serif;
+    }
+    .closeLogo:hover{
+        cursor: pointer;
+    }
+    .logo-background .logo--hidden{
+        animation-name: logoAnimation;
+        animation-duration: 2s;
+        
+    }
+
+.content--visible{
+    animation-name: changeVisibility;
+    animation-duration:3s;
+    }
+.content{
+    opacity:0%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+}
+
+    .title{
+        margin-top: 50px;
+        text-align:center;
+        font-size:50px;
+        font-weight: 400;
+    }
+    .main{
+        display: flex;
+        justify-content:center;
+    }
+        .spin-button{
+            
+            background-color: #fff;
+            padding: 20px 10px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            color:rgb(40, 99, 45);
+            transition:0.3s;
+        }
+        .spin-button:hover{
+            background-color:transparent;
+            border: 1px solid white;
+            color: #fff;
+            cursor: pointer;
+        }

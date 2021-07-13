@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolando dados</title>
 </head>
 <body>
-    <h1>Rolando dados</h1>
-
-    <script src="dice-roller.js"></script>
+    <div class="logo-background" id="logo-background">
+    <img src="logo.png" alt="" class="logo-image">
+    <button  class = 'closeLogo'id="closelogo">Clique aqui para começar</button>
+    </div>
+    <div id = 'content'class="content">
+        
+       <h1 class="title">Rolando dados</h1>
+       
+       <main class = 'main'>
+            <button class = 'spin-button'>Girar o dado 1000 vezes</button>
+       </main>
+       <script src="script.js"></script>
+    </div>
+    
 </body>
 </html>
