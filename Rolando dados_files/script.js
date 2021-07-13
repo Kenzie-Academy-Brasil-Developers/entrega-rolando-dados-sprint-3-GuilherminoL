@@ -13,16 +13,13 @@ quitPopup.addEventListener('click',function(){
 
     quitPopup.style.display ='none'
     setTimeout(function() {
+        background.style.display = 'none'
         body[0].style.background = 'rgb(2, 54, 24)'
         container.style.opacity = '100%'
 
-    },3000)
-
-    setTimeout(function() {
-        background.style.display = 'none'
     },2000)
 })
-// Toda essa parte acima se trata do Popup que inicia com o site, mostrando a logo do cassino
+// Toda essa parte acima se trata do popup que inicia com o site, mostrando a logo do cassino
 function rowDices() {
     dado1 = Math.floor(Math.random() * (7 - 1) + 1)
     dado2 = Math.floor (Math.random() * (7 - 1) + 1)
@@ -31,8 +28,6 @@ function rowDices() {
 
 const spin1000 = document.getElementById('spin-button')
 spin1000.addEventListener('click',function(){
-    const graph = document.getElementById('graph')
-    graph.innerHTML= ''
     let results = [0,0,0,0,0,0,0,0,0,0,0]
     for(let i = 0; i < 1000; i++){
         let sort = rowDices()
@@ -82,26 +77,5 @@ spin1000.addEventListener('click',function(){
         
    }
    console.log(results)
-   let max = Math.max(...results)
-   graph.classList.remove('hidden')
-   let j = 0;
-   for(let i = 0; i < results.length;i++) {
-    setTimeout(function(i) {
-        
-        const newElement = document.createElement('div')
-        newElement.classList.add('graphic-bar')
-        newElement.innerText = j + 2
-        const percent = document.createElement('p')
-        percent.innerText = (results[j]/10) + '%'
-        percent.classList.add('graphic-percentage') 
-        let alturaDiv =(results[j]* 90)/max
-        console.log(alturaDiv)
-        document.documentElement.style.setProperty('--my-finish-height', alturaDiv+'%')
-        newElement.style.height =  alturaDiv+'%' 
-        newElement.appendChild(percent)
-        j++
-        graph.appendChild(newElement)
-   },3000*i) 
-}
+   return results
 })
-
