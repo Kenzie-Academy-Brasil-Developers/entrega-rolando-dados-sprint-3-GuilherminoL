@@ -6,6 +6,12 @@
     25%{opacity:100%; width: 700px; height:700px}
     100%{opacity: 0%; width:600px; height:600px}
 }
+@keyframes logoAnimation-mobile {
+    0% {opacity: 100%;width:300px; height:300px}
+    25%{opacity:100%; width: 350px; height:350px}
+    100%{opacity: 0%; width:300px; height:300px}
+}
+
 @keyframes backgroundChange {
     from { background: none}
     to { background:rgb(2, 54, 24);}
@@ -18,9 +24,9 @@
     from{height:0}
     to {height:var(--my-finish-height)}
 }
-body{
-    
-}
+html {
+    scroll-behavior: smooth;
+  }
 
 
 .body-newcolor{
@@ -59,15 +65,9 @@ body{
         font-family: 'Roboto', sans-serif;
        
     }
-    .closeLogo:hover{
-        transition: 0.5s;
-        border: 1px solid #002754;;
-        background-color: #fff;
-        color: #002754;
-        cursor: pointer;
-    }
+   
     .logo-background .logo--hidden{
-        animation-name: logoAnimation;
+        animation-name: logoAnimation-mobile;
         animation-duration: 2s;
         
     }
@@ -108,14 +108,10 @@ body{
             text-transform: uppercase;
             width: fit-content;
         }
-        .spin-button:hover{
-            background-color:transparent;
-            border: 1px solid white;
-            color: #fff;
-            cursor: pointer;
-        }
+        
         .graphic{
             margin: 50px 0;
+            margin-bottom: 0;
             width:100%;
             height:400px;
             animation-duration:1s;
@@ -153,6 +149,10 @@ body{
     display: none;
 }
 @media screen and (min-width:765px) {
+    .logo-background .logo--hidden{
+        animation-name:logoAnimation;
+    }
+
     .closeLogo{
         width: 600px;
         font-size: 22px;
@@ -165,7 +165,7 @@ body{
         font-size:32px;
     }
     .graphic{
-        margin:50px;
+        margin-top:50px;
         width:80%;
         height:800px;
     }
@@ -179,5 +179,22 @@ body{
             width: 100%;
             text-align: center;
             font-size: 24px;
-        }
+    }
+    .logo-image{
+        width: 600px;
+        height: 600px;
+    }
+    .closeLogo:hover{
+        transition: 0.5s;
+        border: 1px solid #002754;;
+        background-color: #fff;
+        color: #002754;
+        cursor: pointer;
+    }
+    .spin-button:hover{
+        background-color:transparent;
+        border: 1px solid white;
+        color: #fff;
+        cursor: pointer;
+    }
 }

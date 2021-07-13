@@ -81,10 +81,10 @@ spin1000.addEventListener('click',function(){
         results[10]++
         
    }
-   console.log(results)
    let max = Math.max(...results)
    graph.classList.remove('hidden')
    let j = 0;
+   window.scrollTo(0,document.body.scrollHeight)
    for(let i = 0; i < results.length;i++) {
     setTimeout(function(i) {
         
